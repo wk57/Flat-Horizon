@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Game Over! Colisi�n con Obst�culo.");
-            // GameManager.Instance.GameOver();
+            GameManager.Instance.GameOver();
         }
     }
 
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("GameOverZone"))
         {
             Debug.Log("vacio.");
-            // GameManager.Instance.GameOver();
+            GameManager.Instance.GameOver();
         }
     }
 
