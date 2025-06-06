@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 839822489572234561}
   - component: {fileID: 1248039282808221051}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,7 +97,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8047420376538560413}
   - component: {fileID: 5062561337560611089}
-  m_Layer: 0
+  - component: {fileID: 9207403775398040787}
+  m_Layer: 3
   m_Name: Trap Spike
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -167,6 +168,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8569489, y: 0.4321208}
   m_EdgeRadius: 0
+--- !u!50 &9207403775398040787
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029533356435557682}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1536260379093387612
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1244878807676906242}
   - component: {fileID: 1517883316275262850}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -242,7 +270,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -264,7 +292,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2316053809570003704}
   - component: {fileID: 448841313884345834}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -329,7 +357,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -351,7 +379,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5507341977356768883}
   - component: {fileID: 5767860382060802248}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -416,7 +444,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -438,7 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6958801437579796123}
   - component: {fileID: 740401972646335194}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grid (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -488,7 +516,7 @@ GameObject:
   - component: {fileID: 8309756132991247274}
   - component: {fileID: 4236735171287634632}
   - component: {fileID: 5782203335912517981}
-  m_Layer: 7
+  m_Layer: 3
   m_Name: Terrain 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1515,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -1618,7 +1646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 793957ccac93efa42b805e0cb8ac52fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sectionWidth: 27
+  sectionWidth: 90
 --- !u!1 &3457139885347874314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,7 +1656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1007887167718894830}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1689,7 @@ GameObject:
   m_Component:
   - component: {fileID: 146463746473378416}
   - component: {fileID: 4947391213443187234}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1726,7 +1754,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1748,7 +1776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2368006757467439363}
   - component: {fileID: 5194661160585910542}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1813,7 +1841,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1835,7 +1863,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7527148241561861901}
   - component: {fileID: 490510508119143929}
-  m_Layer: 0
+  - component: {fileID: 5341045685081335580}
+  m_Layer: 3
   m_Name: Trap Spike (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1905,6 +1934,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8227272, y: 0.4321208}
   m_EdgeRadius: 0
+--- !u!50 &5341045685081335580
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5882865786674881414}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &6011120374059045654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,7 +1971,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3794131141614189592}
   - component: {fileID: 4800517376948570616}
-  m_Layer: 0
+  - component: {fileID: 7128071307601254664}
+  m_Layer: 3
   m_Name: Trap Spike (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1985,6 +2042,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8227272, y: 0.4321208}
   m_EdgeRadius: 0
+--- !u!50 &7128071307601254664
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6011120374059045654}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &6677783544222644759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1995,7 +2079,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34449690753038176}
   - component: {fileID: 1540240551194517095}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2060,7 +2144,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2082,7 +2166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1744808484084544932}
   - component: {fileID: 2060983674522580214}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Idle (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2147,7 +2231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: da2176ef0629bfd42958a94b2bf225a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2169,7 +2253,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1063342896688578459}
   - component: {fileID: 3985290628142473231}
-  m_Layer: 0
+  - component: {fileID: 1858209600271288225}
+  m_Layer: 3
   m_Name: Trap Spike (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2239,3 +2324,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.8227272, y: 0.4321208}
   m_EdgeRadius: 0
+--- !u!50 &1858209600271288225
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117763955781373614}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

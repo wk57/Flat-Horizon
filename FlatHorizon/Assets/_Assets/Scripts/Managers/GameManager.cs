@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     private float score = 0f; // La puntuación actual del jugador
     private bool isGameOver = false; // Estado del juego
 
+    public ParallaxBackground_0 parallaxBG; 
+
     // Awake se llama cuando la instancia del script se carga
     void Awake()
     {
@@ -53,13 +55,27 @@ public class GameManager : MonoBehaviour
     // Método llamado cuando el juego termina (por colisión o caída)
     public void GameOver()
     {
-        // Evitar que se llame a Game Over múltiples veces si ya ha terminado
         if (isGameOver) return;
 
-        isGameOver = true; // Establecer el estado del juego a Game Over
-        gameOverPanel.SetActive(true); // Mostrar el panel de Game Over
-        finalScoreText.text = "Tu puntuación final: " + Mathf.FloorToInt(score).ToString(); // Mostrar la puntuación final
-        Time.timeScale = 0f; // Pausar el juego para que todo se detenga
+        isGameOver = true;
+        gameOverPanel.SetActive(true);
+        finalScoreText.text = Mathf.FloorToInt(score).ToString();
+        
+        // Detener el parallax 
+        if (parallaxBG != null)
+        {
+            parallaxBG.Camera_MoveSpeed = 0f;
+            parallaxBG.Camera_Move = false;
+        }
+
+        // ---- CONTROL DE AUDIO ---- //
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.bgmSource.Stop();  // Detener BGM
+            AudioManager.Instance.sfxSource.PlayOneShot(AudioManager.Instance.deathSound);  // Sonido de muerte
+        }
+
+        Time.timeScale = 1f;  // Pausar el juego
     }
 
     // Método para reiniciar el juego, llamado por el botón de reinicio
@@ -68,5 +84,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f; // Reanudar el tiempo del juego
         // Cargar la escena actual, lo que reinicia todo el juego
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AudioManager.Instance.sfxSource.Stop();
+        AudioManager.Instance.PlayBGM();
     }
 }

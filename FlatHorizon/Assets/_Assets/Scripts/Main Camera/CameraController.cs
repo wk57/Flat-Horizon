@@ -12,5 +12,9 @@ public class CameraController : MonoBehaviour
             // La cámara se mueve solo en el eje X con el jugador
             transform.position = new Vector3(player.position.x + offsetX, transform.position.y, transform.position.z);
         }
+        else
+        {
+            transform.position = new Vector3(0,0,0);
+        }
     }
 }

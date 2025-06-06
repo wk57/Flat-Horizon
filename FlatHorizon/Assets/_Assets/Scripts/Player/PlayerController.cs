@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHoldTime = 0.2f;         // Duraci�n m�xima que se puede mantener el salto
     public float jumpCutMultiplier = 0.5f;    // Cu�nto se reduce la fuerza si se suelta antes
 
-    [Header("Verificaci�n de suelo")]
+    [Header("Verificacion de suelo")]
     public LayerMask groundLayer;
     public Transform groundCheck;
 
@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private float jumpTimeCounter;
     private bool isJumpingHeld;
+
+    private enum MovementState { running, jumping}
+    private MovementState state = MovementState.running;
 
     void Start()
     {
@@ -88,7 +91,13 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Debug.Log("Game Over! Colisi�n con Obst�culo.");
+            animator.SetTrigger("Death");
+            moveSpeed = 0f;
+            AudioManager.Instance.PlayDeathSound();
+            rb.linearVelocity = Vector2.zero;             // Detener velocidad
+            rb.angularVelocity = 0f;                // Detener rotación (si aplica)
+            rb.bodyType = RigidbodyType2D.Kinematic; // Hacerlo inmune a la física
+
             GameManager.Instance.GameOver();
         }
     }
@@ -97,7 +106,13 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("GameOverZone"))
         {
-            Debug.Log("vacio.");
+            Debug.Log("vacio");
+            moveSpeed = 0f;
+            AudioManager.Instance.PlayDeathSound();
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+
             GameManager.Instance.GameOver();
         }
     }
